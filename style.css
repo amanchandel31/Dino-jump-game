@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Micro+5&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-color: blue;
+    background-image: url(back.avif);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.dino{
+    background-image: url(firstp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+.obsctacle{
+    background-image: url(secondp.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 130px;
+    position: absolute;
+    bottom: 0px;
+    left: 45vw;
+}
+.obsctacleAn{
+    animation: obsctacleAn 5s linear infinite;
+}
+.animateDino{
+    animation: dino 0.6s linear;
+}
+.gameOver{
+    position: relative;
+    top: 160px;
+    /* right: 20px; */
+    color: rgb(24, 53, 2);
+    font-size: 45px;
+    text-align: center;
+    /* visibility: hidden; */
+    font-family: "Micro 5", sans-serif
+}
+#scoreCount{
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    /* border: 2px solid white; */
+    background-color: rgb(242, 217, 217);
+    width: 112px;
+    font-weight: bold;
+    color: teal;
+    padding: 3px 5px;
+    font-family: "Basic", sans-serif;
+}
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes obsctacleAn{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
